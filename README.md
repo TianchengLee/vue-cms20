@@ -1,6 +1,6 @@
-# vue-cli-study
+# vue-cms
 
-> 这是一个cms项目
+> 这是一个cms学习项目
 
 ## Build Setup
 
@@ -33,7 +33,7 @@ npm run build --report
 
 - 项目文件的结构注意事项, 可以参考现有的开源项目, 更方便的管理自己的文件结构
 
-参考结构:
+- 参考结构:
 
   src => pages => home => index.vue
 

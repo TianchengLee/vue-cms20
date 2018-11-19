@@ -26,18 +26,36 @@
 		</nav>
     
     <!-- 中间内容区域 -->
-    <router-view></router-view>
+		<transition>
+    	<router-view></router-view>
+		</transition>
 
   </div>
 </template>
 
 <script>
-
 </script>
 
 <style lang="less">
 .app-container {
   padding-top: 40px;
   padding-bottom: 50px;
+  overflow-x: hidden;
+
+  .v-enter {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  .v-leave-to {
+		position: absolute;
+		transform: translateX(-100%);
+		opacity: 0;
+  }
+
+  .v-enter-active,
+  .v-leave-active {
+    transition: all 0.6s ease;
+  }
 }
 </style>

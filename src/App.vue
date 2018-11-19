@@ -37,6 +37,7 @@
 
 <style lang="less">
 .app-container {
-  padding-top: 40px
+  padding-top: 40px;
+  padding-bottom: 50px;
 }
 </style>

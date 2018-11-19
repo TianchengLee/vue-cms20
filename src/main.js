@@ -21,6 +21,9 @@ Vue.component(SwipeItem.name, SwipeItem)
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
 
+// 引入自己的全局样式
+import './css/common.less'
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

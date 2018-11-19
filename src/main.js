@@ -11,6 +11,7 @@ Vue.component(Header.name, Header)
 
 // 导入mui的样式
 import './lib/mui/css/mui.css'
+import './lib/mui/css/icons-extra.css'
 
 /* eslint-disable no-new */
 new Vue({

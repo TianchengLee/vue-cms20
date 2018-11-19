@@ -13,6 +13,7 @@
     "ajv": "^6.5.5",
     "mint-ui": "^2.2.13",
     "vue": "^2.5.2",
+    "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

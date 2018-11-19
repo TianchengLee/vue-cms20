@@ -2,6 +2,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router/'
 
+// 导入vue-resource
+import VueResource from 'vue-resource'
+// 注册vue-resource
+Vue.use(VueResource)
+
 Vue.config.productionTip = false
 
 // 按需导入需要的mint-ui组件

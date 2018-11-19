@@ -26,7 +26,7 @@
 		</nav>
     
     <!-- 中间内容区域 -->
-    <h1>这是app组件</h1>
+    <router-view></router-view>
 
   </div>
 </template>

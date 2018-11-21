@@ -28,7 +28,7 @@ import './lib/mui/css/icons-extra.css'
 import './css/common.less'
 
 // 定义全局过滤器
-Vue.filter('dateFormat', function(dateStr, pattern) {
+Vue.filter('dateFormat', function(dateStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
   // 直接调用表示获取当前时间
   return moment(dateStr).format(pattern)
 })

@@ -7,8 +7,8 @@
           <div class="mui-media-body">
             <h4 class="title mui-ellipsis">{{ item.title }}</h4>
             <p>
-              <span class="ctime">发表时间: {{ item.add_time }}</span>
-              <span class="click">点击: {{ item.click }}次</span>
+              <span class="ctime mui-pull-left">发表时间: {{ item.add_time | dateFormat('YYYY-MM-DD') }}</span>
+              <span class="click mui-pull-right">点击: {{ item.click }}次</span>
             </p>
           </div>
         </a>
@@ -52,11 +52,16 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
     }
     .mui-media-body {
+      width: 100%;
       .title {
         font-size: 13px;
         font-weight: bold;
+      }
+      > p {
+        width: 100%;
       }
       .ctime,
       .click {

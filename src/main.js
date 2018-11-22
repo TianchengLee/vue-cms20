@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue' // /node_modules/vue/package.json : main => 
 import App from './App'
 import router from './router/'
 import moment from 'moment'
@@ -9,18 +9,20 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 // 配置vue-resource的请求根域名
 Vue.http.options.root = 'http://www.lovegf.cn:8899/'
+// 配置post请求以传统表单形式提交参数 application/x-www-form-urlencoded
+Vue.http.options.emulateJSON = true;
 
 Vue.config.productionTip = false
 
 // 按需导入需要的mint-ui组件
-import { 
+import {
   Header,
   Swipe,
   SwipeItem,
   Button
 } from 'mint-ui'
 
-// 注册组件
+// 全局注册 注册组件
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)

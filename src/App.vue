@@ -24,7 +24,6 @@
 				<span class="mui-tab-label">搜索</span>
 			</router-link>
 		</nav>
-    
     <!-- 中间内容区域 -->
 		<transition>
     	<router-view></router-view>
@@ -48,9 +47,9 @@
   }
 
   .v-leave-to {
-		position: absolute;
-		transform: translateX(-100%);
-		opacity: 0;
+    position: absolute;
+    transform: translateX(-100%);
+    opacity: 0;
   }
 
   .v-enter-active,

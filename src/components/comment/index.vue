@@ -77,7 +77,7 @@ export default {
     .comment-item {
       margin: 5px 0;
       .comment-title {
-        font-size: 13px;
+        font-size: 10px;
         background-color: #ccc;
         height: 24px;
       }

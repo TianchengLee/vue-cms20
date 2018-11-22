@@ -19,24 +19,28 @@ import {
   Header,
   Swipe,
   SwipeItem,
-  Button
+  Button,
+  Lazyload
 } from 'mint-ui'
-
+// import MintUI from 'mint-ui'
+// import 'mint-ui/lib/style.css'
+// Vue.use(MintUI)
 // 全局注册 注册组件
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 Vue.component(Button.name, Button)
+Vue.use(Lazyload);
 
 // 导入mui的样式
-import './lib/mui/css/mui.css'
+import './lib/mui/css/mui.min.css'
 import './lib/mui/css/icons-extra.css'
 
 // 引入自己的全局样式
 import './css/common.less'
 
 // 定义全局过滤器
-Vue.filter('dateFormat', function(dateStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
+Vue.filter('dateFormat', function (dateStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
   // 直接调用表示获取当前时间
   return moment(dateStr).format(pattern)
 })

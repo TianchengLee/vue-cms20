@@ -20,7 +20,7 @@ import {
   Swipe,
   SwipeItem,
   Button,
-  Lazyload
+  // Lazyload
 } from 'mint-ui'
 // import MintUI from 'mint-ui'
 // import 'mint-ui/lib/style.css'
@@ -30,7 +30,7 @@ Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 Vue.component(Button.name, Button)
-Vue.use(Lazyload);
+// Vue.use(Lazyload);
 
 // 导入mui的样式
 import './lib/mui/css/mui.min.css'
@@ -38,6 +38,12 @@ import './lib/mui/css/icons-extra.css'
 
 // 引入自己的全局样式
 import './css/common.less'
+
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload)
+
+import VuePreview from 'vue2-preview'
+Vue.use(VuePreview)
 
 // 定义全局过滤器
 Vue.filter('dateFormat', function (dateStr, pattern = 'YYYY-MM-DD HH:mm:ss') {

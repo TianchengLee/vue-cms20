@@ -10,9 +10,11 @@
       </div>
     </div>
 
+    <img class="preview-img" :key="item.src" v-for="(item, index) in list" :src="item.src" height="100" @click="$preview.open(index, list)">
+
     <ul>
       <li class="img-container" v-for="item in images" :key="item.id">
-        <img v-lazy="item.img_url">
+        <img v-lazy="item">
       </li>
     </ul>
   </div>
@@ -28,7 +30,27 @@ export default {
   data() {
     return {
       categories: [],
-      images: []
+      images: [
+        "http://img0.imgtn.bdimg.com/it/u=1886777974,634529426&fm=200&gp=0.jpg",
+        "http://g.hiphotos.baidu.com/image/pic/item/2e2eb9389b504fc27b7148cfefdde71191ef6dca.jpg",
+        "http://a.hiphotos.baidu.com/image/pic/item/279759ee3d6d55fbba3e616666224f4a21a4ddf1.jpg"
+      ],
+      list: [{
+          src: "http://img0.imgtn.bdimg.com/it/u=1886777974,634529426&fm=200&gp=0.jpg",
+          w: 600,
+          title: 'Image Caption 1',
+          h: 400
+        }, {
+          src: "http://g.hiphotos.baidu.com/image/pic/item/2e2eb9389b504fc27b7148cfefdde71191ef6dca.jpg",
+          w: 1200,
+          title: 'Image Caption 1',
+          h: 900
+        }, {
+          src: "http://a.hiphotos.baidu.com/image/pic/item/279759ee3d6d55fbba3e616666224f4a21a4ddf1.jpg",
+          w: 1200,
+          title: 'Image Caption 1',
+          h: 900
+        }]
     };
   },
   methods: {
@@ -55,7 +77,7 @@ export default {
   },
   created() {
     this.getCategory();
-    this.getImages(0);
+    // this.getImages(0);
   },
   mounted() {
     // 初始化区域滚动一定要放在mounted钩子函数中
@@ -70,17 +92,20 @@ export default {
 <style lang="less">
 .img-container {
   width: 100%;
+  min-height: 300px;
+  margin: 10px 0;
   background-color: #ccc;
 }
 img[lazy="loading"] {
   width: 40px;
   height: 300px;
   margin: auto;
+  background-color: pink;
 }
 
 img[lazy="error"] {
   width: 100%;
-  height: 300px;
-  background-color: red;
+  // height: 300px;
+  // background-color: red;
 }
 </style>

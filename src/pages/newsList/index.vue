@@ -41,7 +41,20 @@ export default {
         }
       });
     }
-  }
+  },
+  // beforeRouteEnter(to, from, next) {
+  //   // ...
+  //   console.log('当路由进入之前')
+  //   next(); // 将路由传递下去, 如果不调用则无法跳转
+  // },
+  // beforeRouteUpdate(to, from, next) {
+  //   console.log('当路由更新之前')
+  //   next();
+  // },
+  // beforeRouteLeave(to, from, next) {
+  //   console.log('当路由离开之前')
+  //   next();
+  // }
 };
 </script>
 
